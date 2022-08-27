@@ -87,3 +87,44 @@ a {
         font-size: 1.5rem;
     }
 }
+
+/* Badges */
+.badge {
+    border-radius: 20px;
+    padding: 0.5rem 2rem;
+    font-weight: 600;
+    /* disables text wraping when their is limited space */
+    white-space: nowrap;
+    font-size: 2rem;
+}
+
+/* using the BEM nomeclature (block-modifier or block--elements)*/
+.badge--primary {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.badge--secondary {
+    background: var(--color-secondary);
+    color: #fff;
+}
+
+.badge--small {
+    font-size: 1.6rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .badge {
+        font-size: 1.5rem;
+    }
+
+    .badge--small {
+        font-size: 1.2rem;
+    }
+}
+
+/* Lists */
+.list {
+    list-style-type: none;
+    padding-left: 0;
+}
