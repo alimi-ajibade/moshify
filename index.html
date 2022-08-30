@@ -14,20 +14,33 @@
     </head>
 
     <body style="padding: 5rem;">
-        <div class="collapsible">
-            <header>
-                <h2>item 1</h2>
-                <span class="icon-container">
-                    <svg class="icon icon--primary">
-                        <use xlink:href="images/sprite.svg#chevron"></use>
-                    </svg>
-                </span>
+        <div class="collapsible collapsible--expanded">
+            <header class="collapsible__header">
+                <h2 class="collapsible__heading">item 1</h2>
+                <svg class="icon collapsible__chevron">
+                    <use xlink:href="images/sprite.svg#chevron"></use>
+                </svg>
             </header>
             <div class="collapsible__content">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non doloribus vel neque iste fuga soluta fugit
                 nemo qui debitis accusamus?
             </div>
         </div>
+
+        <div class="collapsible">
+            <header class="collapsible__header">
+                <h2 class="collapsible__heading">item 1</h2>
+                <svg class="icon icon--primary collapsible__chevron">
+                    <use xlink:href="images/sprite.svg#chevron"></use>
+                </svg>
+            </header>
+            <div class="collapsible__content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non doloribus vel neque iste fuga soluta fugit
+                nemo qui debitis accusamus?
+            </div>
+        </div>
+
+        <script src="js/main.js"></script>
     </body>
 
 </html>
