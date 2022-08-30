@@ -167,8 +167,17 @@ a {
     width: 40px;
 }
 
+.icon--small {
+    height: 30px;
+    width: 30px;
+}
+
 .icon--primary {
     fill: var(--color-primary)
+}
+
+.icon--white {
+    fill: #fff;
 }
 
 .icon-container {
@@ -179,6 +188,10 @@ a {
     height: 64px;
     justify-content: center;
     width: 64px;
+}
+
+.icon-container--accent {
+    background: var(--color-accent);
 }
 
 /* Buttons */
@@ -454,5 +467,39 @@ a {
 @media screen and (min-width: 1024px) {
     .grid--1x3 {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Testimonial */
+
+.testimonial {
+    padding: 3rem;
+}
+
+.testimonial__image {
+    position: relative;
+    /* Added it myself to solve the icon cover issue */
+    margin: 1rem;
+}
+
+.testimonial__image>img {
+    width: 100%;
+}
+
+.testimonial__image>.icon-container {
+    position: absolute;
+    top: 10px;
+    right: -32px;
+}
+
+@media screen and (min-width: 768px) {
+
+    .testimonial .quote,
+    .testimonial .quote__author {
+        font-size: 2.4rem;
+    }
+
+    .testimonial .quote {
+        margin-left: 6rem;
     }
 }
