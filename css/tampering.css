@@ -29,12 +29,8 @@ html {
 body {
     color: var(--color-body);
     font-family: 'Inter', Arial, Helvetica, sans-serif;
-    font-size: 2rem;
+    font-size: 2.4rem;
     line-height: 1.5;
-}
-
-img {
-    width: 100%;
 }
 
 h1,
@@ -46,7 +42,7 @@ h3 {
 }
 
 h1 {
-    font-size: 6rem;
+    font-size: 7rem;
 }
 
 h2 {
@@ -54,9 +50,8 @@ h2 {
 }
 
 h3 {
-    font-size: 2.8rem;
-    font-weight: 600;
-    line-height: 1.3;
+    font-size: 3rem;
+    font-weight: 500;
 }
 
 p {
@@ -119,7 +114,7 @@ a {
     white-space: nowrap;
 }
 
-/* using the BEM nomeclature (block--modifier or block--elements)*/
+/* using the BEM nomeclature (block-modifier or block--elements)*/
 .badge--primary {
     background: var(--color-primary);
     color: #fff;
@@ -212,7 +207,7 @@ a {
     border-radius: 40px;
     border: 0;
     cursor: pointer;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 600;
     margin: 1rem 0;
     outline: 0;
@@ -274,6 +269,7 @@ a {
 }
 
 .btn--block {
+    font-size: 1.8rem;
     width: 100%;
     display: block;
 }
@@ -284,7 +280,6 @@ a {
     }
 }
 
-/* For 4k Screens */
 @media screen and (min-width: 2026px) {
     .btn {
         padding: 2rem 3rem;
@@ -297,12 +292,12 @@ a {
     border: 1px solid var(--color-border);
     color: var(--color-headings);
     font-size: 2rem;
-    outline: 0;
+    outline: none;
     padding: 1.5rem 3.5rem;
 }
 
 ::placeholder {
-    color: #cdcbd7;
+    color: #f2f2f5;
 }
 
 .input-group {
@@ -337,7 +332,7 @@ a {
 
 .card__header,
 .card__body {
-    padding: 2rem 7%;
+    padding: 2rem 3rem;
 }
 
 .card--primary .card__header {
@@ -350,11 +345,11 @@ a {
     color: #fff;
 }
 
-.card--primary .badge--primary {
+.card--primary .badge {
     background: #126de4;
 }
 
-.card--secondary .badge--secondary {
+.card--secondary .badge {
     background: #02cdf1;
 }
 
@@ -372,12 +367,12 @@ a {
 }
 
 .plan__price {
-    font-size: 5rem;
+    font-size: 6rem;
 }
 
 .plan__billing-cycle {
     font-size: 2.4rem;
-    font-weight: 300;
+    font-weight: 300rem;
     opacity: 0.8;
     padding-right: 1rem;
 }
@@ -392,10 +387,6 @@ a {
 .plan .list__item {
     margin-bottom: 2rem;
 }
-
-/* .plan--popular {
-    box-shadow: 0 0 30px 10px #efefef;
-} */
 
 .plan--popular .card__header {
     position: relative;
@@ -481,13 +472,13 @@ a {
 .quote__author {
     font-size: 3rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 0;
 }
 
 .quote__organization {
     color: var(--color-headings);
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-style: normal;
     opacity: 0.4;
 }
@@ -498,17 +489,16 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
-
-    .quote {
-        font-size: 2rem;
-    }
-
     .quote__author {
         font-size: 2.4rem;
     }
 
     .quote__organization {
         font-size: 1.6rem;
+    }
+
+    .quote {
+        font-size: 2rem;
     }
 }
 
@@ -535,14 +525,10 @@ a {
     padding: 3rem;
 }
 
-.testimonial .quote {
-    margin: 2rem 0;
-    font-size: 110%;
-}
-
 .testimonial__image {
     position: relative;
-    margin: 0 3rem;
+    /* Added it myself to solve the icon cover issue */
+    margin: 1rem;
 }
 
 .testimonial__image>img {
@@ -557,21 +543,20 @@ a {
 
 @media screen and (min-width: 768px) {
 
-    .testimonial__image {
-        margin: 0;
+    .testimonial .quote,
+    .testimonial .quote__author {
+        font-size: 2.4rem;
     }
 
     .testimonial .quote {
-        margin: 5rem 0 0 6rem;
-        font-size: 120%;
-        line-height: 1.5;
+        margin-left: 6rem;
     }
 }
 
 /* Callout */
 .callout {
     padding: 4rem;
-    border-radius: 5px;
+    border-radius: 30px;
 }
 
 .callout--primary {
@@ -626,25 +611,25 @@ a {
 }
 
 .collapsible__content {
-    max-height: 0;
+    max-height: 0vh;
     opacity: 0;
     overflow: hidden;
     transition: all 0.3s;
 }
 
 .collapsible--expanded .collapsible__chevron {
-    transform: rotate(0);
+    transform: rotate(0deg);
 }
 
 .collapsible--expanded .collapsible__content {
-    max-height: 100%;
+    max-height: 100vh;
     opacity: 1;
 }
 
 /* Blocks */
 
 .block {
-    --padding-vertical: 5rem;
+    --padding-vertical: 2rem;
     padding: var(--padding-vertical) 2rem;
 }
 
@@ -669,7 +654,7 @@ a {
 }
 
 .block--skewed-right {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 93%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
     padding-bottom: calc(var(--padding-vertical) + 4rem);
 }
 
@@ -678,15 +663,11 @@ a {
     padding-bottom: calc(var(--padding-vertical) + 4rem);
 }
 
-/* @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
     .block {
         padding: 6rem 2rem;
     }
-
-    .block--skewed-right {
-        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
-    }
-} */
+}
 
 /* Container */
 .container {
@@ -696,12 +677,12 @@ a {
 
 /* nav */
 .nav {
-    background: #000;
+    background: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 1rem;
+    padding: 0 1rem;
 }
 
 .nav__list {
@@ -714,13 +695,8 @@ a {
     border-bottom: 1px solid #222;
 }
 
-.nav__item:last-of-type {
-    border-bottom: none;
-}
-
 .nav__item>a {
     color: #d2d0db;
-    transition: color 0.3s;
 }
 
 .nav__item>a:hover {
@@ -729,19 +705,18 @@ a {
 
 .nav__toggler {
     opacity: .5;
-    transition: box-shadow 0.3s;
-    cursor: pointer;
+    transition: all 0.3s;
 }
 
 .nav.collapsible--expanded .nav__toggler {
     opacity: 1;
-    box-shadow: 0 0 0 3px #666;
+    box-shadow: 0 0 0 3px #777;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .nav__brand {
     transform: translateY(5px);
-    width: 150px;
 }
 
 @media screen and (min-width: 768px) {
@@ -750,11 +725,11 @@ a {
     }
 
     .nav__list {
-        width: auto;
         display: flex;
         font-size: 1.6rem;
         max-height: 100%;
         opacity: 1;
+        width: auto;
     }
 
     .nav__item {
@@ -771,9 +746,18 @@ a {
     margin: 2rem 0 5rem;
 }
 
+.hero__image {
+    width: 100%;
+}
+
 @media screen and (min-width: 768px) {
     .hero {
         padding-top: 1rem;
+    }
+
+    .hero__content {
+        align-self: center;
+        text-align: left;
     }
 }
 
@@ -794,13 +778,15 @@ a {
     font-size: 2rem;
     font-weight: 600;
     justify-items: center;
-    max-width: 700px;
+    max-width: 670px;
     margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
     .block-domain__prices {
+        font-size: 1.5rem;
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        grid-template-rows: 1fr;
     }
 }
 
@@ -828,6 +814,10 @@ a {
     margin: 1rem 0;
 }
 
+.feature__image {
+    width: 100%;
+}
+
 @media screen and (min-width: 768px) {
     .feature:nth-of-type(even) .feature__content {
         order: 2;
@@ -835,6 +825,9 @@ a {
 }
 
 /* Showcase Block */
+.block-showcase__image>img {
+    width: 100%;
+}
 
 @media screen and (min-width: 768px) {
 
@@ -855,7 +848,7 @@ a {
 /* Footer */
 .footer {
     background: #232323;
-    padding-top: 10rem;
+    gap: 4rem;
 }
 
 .footer__section {
@@ -866,19 +859,14 @@ a {
 .footer__heading {
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 2.5rem;
-    line-height: 1.5;
 }
 
-.footer__section .list {
+.footer .list {
     margin: 0;
 }
 
-.footer .list__item {
-    padding: 0.5rem 0;
-}
-
 .footer__brand>img {
+    width: 100%;
     max-width: 230px;
 }
 
@@ -897,19 +885,18 @@ a {
 }
 
 .footer__copyright {
-    font-size: 2.1rem;
+    font-size: 1.2rem;
     color: #fff;
     opacity: 0.3;
 }
 
 @media screen and (min-width: 768px) {
-
-    .footer {
-        font-size: 1.5rem;
-    }
-
     .footer__sections {
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+
+    .footer .footer__content {
+        order: 2;
     }
 
     .footer .collapsible__chevron {
@@ -919,11 +906,11 @@ a {
     .footer .collapsible__content {
         max-height: 100%;
         opacity: 1;
+        font-size: 1.5rem;
     }
 
     .footer__brand {
         order: -1;
-        margin-top: 1rem;
     }
 
     .footer__copyright {
@@ -932,14 +919,10 @@ a {
 
     .footer__section {
         border: 0;
+        justify-self: center;
     }
 
     .footer__heading {
         font-size: 1.6rem;
     }
-}
-
-/* Position Callout */
-.callout-signup {
-    transform: translateY(5rem);
 }
