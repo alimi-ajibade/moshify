@@ -771,12 +771,6 @@ a {
     margin: 2rem 0 5rem;
 }
 
-@media screen and (min-width: 768px) {
-    .hero {
-        padding-top: 1rem;
-    }
-}
-
 /* Domian-block */
 
 .block-domain .input-group {
